@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    print(chr(i).format(), end="")
+for alph in range(ord('a'), ord('z')):
+    if (alph == ord('e') or (alph == ord('q'))):
+        continue
+    print(chr(alph).format(), end="")
