@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 
+
 def load_from_json_file(filename):
     """Load an object from a JSON file and return it."""
     try:
@@ -8,4 +9,6 @@ def load_from_json_file(filename):
             obj = json.load(file)
         return obj
     except json.JSONDecodeError as e:
-        raise ValueError(f'{e.msg}: line {e.lineno} column {e.colno} (char {e.pos})')
+        raise ValueError(
+            f'{e.msg}: line {e.lineno} column {e.colno} (char {e.pos})'
+        )
